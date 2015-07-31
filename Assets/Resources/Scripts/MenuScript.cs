@@ -9,7 +9,6 @@ public partial class MenuScript : MonoBehaviour {
 
 	GameObject[] Pages;
 	Sprite[] Heroes;
-	Sprite[] Cards;
 	int H = 0;
 	int P = 0;
 
@@ -80,12 +79,9 @@ public partial class MenuScript : MonoBehaviour {
 	void Start(){
 
 		Heroes = Resources.LoadAll<Sprite> ("Images/Heroes/Portrait");
-		Cards = Resources.LoadAll<Sprite> ("Images/Cards");
 		Pages = GameObject.FindGameObjectsWithTag ("Page").OrderBy (go => go.name).ToArray ();
 
-		for (int k = 1; k < Cards.Length; k++) {
-			GameObject.Find("Slot " + k).transform.GetComponent<Image>().sprite = Cards[k];
-		}
+
 
 		PageTurner (0);
 	}

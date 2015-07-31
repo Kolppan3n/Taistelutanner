@@ -17,15 +17,7 @@ public partial class MenuScript : MonoBehaviour {
 	}
 
 	public int CompareTo (Card other)
-	{
-		
-		/*if (this.name < other.name)
-			return -1;
-		if (this.name == other.name)
-			return 0;
-		if (this.name > other.name)
-			return 1;*/
-		
+	{	
 		return 0;
 	}
 }
